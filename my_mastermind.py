@@ -54,9 +54,7 @@ def generate_secret_code():
         secret_code = random.randrange(0, 8)
         code_list.append(str(secret_code))
         i += 1
-    print(code_list)
     secret_code = ''.join(code_list)
-    print(secret_code)
     return secret_code
 
 
@@ -91,11 +89,3 @@ def print_pieces(well_placed, misplaced):
 
 if __name__ == "__main__":
     main()
-
-# if there's no secret code and no number of attempts specified in stdin
-# then number of attempts are 10 as default, and a random secret code is generated
-# ask user input
-# check user input for well placed pieces and misplaced piecies
-# if errors, prompt the errors
-# if win, then stop the game
-# if loss, then display well placed pieces and misplaced pieces and ask again, until the end of the attempts
